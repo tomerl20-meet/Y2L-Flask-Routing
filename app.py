@@ -10,6 +10,8 @@ def hello_world():
 
 @app.route('/store')
 def store_rout():
+	return render_template(
+		'databasses.html', n = query_all)
     return render_template("store.html")
 
 @app.route('/cart')
